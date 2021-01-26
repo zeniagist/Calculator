@@ -25,7 +25,7 @@ function calculate(){
   document.querySelector('.output').innerText = result;
 }
 
-// show operators
+// show math operators
 document.querySelector('#add').addEventListener('click', function(){
   operator = "+";
   operatorElement.value = operator;
@@ -50,7 +50,16 @@ document.querySelector('#eql').addEventListener('click', function(){
   calculate();
 });
 
-// math functions
+// reset values
+document.querySelector('#reset').addEventListener('click', function(){
+  operator = "+";
+  operatorElement.value = operator;
+  document.querySelector('#input1').value = 0;
+  document.querySelector('#input2').value = 0;
+  document.querySelector('.output').innerText = '';  
+});
+
+// functions
 function add(number1, number2){
   return number1 + number2;
 }

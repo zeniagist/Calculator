@@ -60,7 +60,7 @@ button{
   font-weight: bold;
 }
 
-button#eql{
+button#eql, button#reset{
   grid-column-start: 1;
   grid-column-end: 3;
 }
