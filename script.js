@@ -5,8 +5,8 @@ function calculate(){
   let number1 = parseInt(document.querySelector('#input1').value);
   let number2 = parseInt(document.querySelector('#input2').value);
   let result = 0;
-
-  // 
+  
+  // switch between functions
   switch(operator){
     case "+":
       result = add(number1, number2);
@@ -21,9 +21,11 @@ function calculate(){
       result = divide(number1, number2);
       break;
   }
+  // print result
   document.querySelector('.output').innerText = result;
 }
 
+// show operators
 document.querySelector('#add').addEventListener('click', function(){
   operator = "+";
   operatorElement.value = operator;
@@ -47,20 +49,3 @@ document.querySelector('#div').addEventListener('click', function(){
 document.querySelector('#eql').addEventListener('click', function(){
   calculate();
 });
-
-// functions
-function add(number1, number2){
-  return number1 + number2;
-}
-
-function subtract(number1, number2){
-  return number1 - number2;
-}
-
-function multiply(number1, number2){
-  return number1 * number2;
-}
-
-function divide(number1, number2){
-  return number1 / number2;
-}
